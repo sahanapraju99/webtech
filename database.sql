@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS blue_beige_portal
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE blue_beige_portal;
+
+CREATE TABLE IF NOT EXISTS applications (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,
+  dob DATE NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  phone CHAR(10) NOT NULL,
+  address VARCHAR(500) NOT NULL,
+  qualification VARCHAR(60) NOT NULL,
+  institution VARCHAR(150) NOT NULL,
+  course VARCHAR(120) DEFAULT NULL,
+  submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
